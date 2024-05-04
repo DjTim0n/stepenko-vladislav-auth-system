@@ -36,8 +36,10 @@ export const MainPage = () => {
       })
     );
   };
-
-  let width = screen?.width;
+  let width = 1920;
+  if (typeof window !== "undefined") {
+    width = screen?.width;
+  }
 
   //   BMW СИЛА,MERSEDES МОГИЛА
   return (
