@@ -37,13 +37,20 @@ export const MainPage = () => {
     );
   };
 
+  let width = screen.width;
+
   //   BMW СИЛА,MERSEDES МОГИЛА
   return (
     <>
       {isAuth === false ? (
         <>
           <div className="flex min-h-full items-center overflow-hidden">
-            <div className="container flex flex-col justify-center items-center min-h-screen h-full p-0 mainpageimage"></div>
+            {width > 700 ? (
+              <div className="container flex flex-col justify-center items-center min-h-screen h-full p-0 mainpageimage"></div>
+            ) : (
+              ""
+            )}
+
             <div className="container flex flex-col justify-center items-center min-h-[700px] h-full p-0">
               <Tabs
                 defaultValue="auth"
