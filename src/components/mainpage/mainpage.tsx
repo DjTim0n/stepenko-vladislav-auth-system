@@ -42,14 +42,14 @@ export const MainPage = () => {
     <>
       {isAuth === false ? (
         <>
-          <div className="flex min-h-full items-center">
+          <div className="flex min-h-full items-center overflow-hidden">
             <div className="container flex flex-col justify-center items-center min-h-screen h-full p-0 mainpageimage"></div>
-            <div className="container flex flex-col justify-center items-center min-h-[700px] h-full pl-0">
+            <div className="container flex flex-col justify-center items-center min-h-[700px] h-full p-0">
               <Tabs
                 defaultValue="auth"
                 className="w-[400px] min-h-[400px] h-full grid"
               >
-                <TabsList className="grid w-full grid-cols-2">
+                <TabsList className="grid w-3/4 grid-cols-2 justify-self-center">
                   <TabsTrigger value="auth">Авторизация</TabsTrigger>
                   <TabsTrigger value="reg">Регистрация</TabsTrigger>
                 </TabsList>
