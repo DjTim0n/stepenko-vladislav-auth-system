@@ -37,7 +37,7 @@ export const MainPage = () => {
     );
   };
 
-  let width = screen.width;
+  let width = screen?.width;
 
   //   BMW СИЛА,MERSEDES МОГИЛА
   return (
