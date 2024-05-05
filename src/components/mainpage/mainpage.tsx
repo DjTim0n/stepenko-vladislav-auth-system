@@ -20,7 +20,6 @@ import {
 } from "../ui";
 import { AuthForm } from "../auth/form-auth";
 import { RegForm } from "../reg/form-reg";
-import Image from "next/image";
 export const MainPage = () => {
   const isAuth = useAppSelector((state) => state.auth.isAuth);
   const router = useRouter();
@@ -54,6 +53,7 @@ export const MainPage = () => {
             )}
 
             <div className="container flex flex-col justify-center items-center min-h-[700px] h-full p-0">
+              <Logo />
               <Tabs
                 defaultValue="auth"
                 className="w-[400px] min-h-[400px] h-full grid"
@@ -74,20 +74,18 @@ export const MainPage = () => {
         </>
       ) : (
         <>
-          <div className="flex items-center flex-col justify-center bg-gray-500 w-72 h-80 rounded-lg">
+          <div className="container flex items-center flex-col justify-center bg-gray-500 w-72 h-80 rounded-lg">
             <Logo />
             <div className="flex flex-col gap-5 items-center justify-center text-center">
               <h2>Вы вошли под: {username}</h2>
-              <p>Каждый час ваш пароль изменяется.</p>
-              <p>Письмо с новым паролем будет приходить на вашу почту.</p>
-              <button
-                className="bg-white w-36 h-8 rounded-lg transition-all hover:scale-95 active:scale-90"
+              <Button
+                className="rounded-lg transition-all hover:scale-95 active:scale-90"
                 onClick={() => {
                   handleLogout();
                 }}
               >
                 Выйти
-              </button>
+              </Button>
             </div>
           </div>
         </>

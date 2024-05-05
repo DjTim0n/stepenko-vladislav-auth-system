@@ -23,3 +23,5 @@ export {
   ToastAction,
 } from "@/components/ui/toast";
 export { useToast, toast } from "@/components/ui/use-toast";
+export { DatePicker } from "@/components/ui/date-picker";
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@/components/ui/input-otp"

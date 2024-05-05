@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ModeToggle } from "@/components/ui";
 import { Toaster } from "@/components/ui/toaster";
-
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",

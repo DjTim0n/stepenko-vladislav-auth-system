@@ -1,7 +1,10 @@
+import Image from "next/image";
+import logo from "../../public/logo.png";
+
 export const Logo = () => {
   return (
     <>
-      <h1 className="mb-10 font-semibold">BMW сила</h1>
+      <Image src={logo} alt="NoImage" width={200} height={100} />
     </>
   );
 };
